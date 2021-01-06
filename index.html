@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Belly Button Biodiversity</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-color: rgb(206, 204, 204);">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 jumbotron">
+        <div class="text-center">
+          <h1>Belly Button Biodiversity Dashboard</h1>
+          <p style="background-color:white">  Using the interactive charts below will allow the user to examine different subjects' bellybutton culture data. 
+            These visualizations designed through Plotly show the top 10 bacterial species that show up in each subject's bellybutton 
+            The reason for the gathering of this data is to find a bacteria that can be used to best synthesize the taste of beef,
+            and thus being able to navigate the different bacteria types found in each subject's bellybutton will tell the users which subjects 
+            have the bacteria in their bellybutton that Roza finds suited for the study. These visualizations through plotly have taken Roza's data 
+            and made her findings legible for any user.
+  
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <div class="well">
+          <h5>Test Subject ID No.:</h5>
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Demographic Info</h3>
+          </div>
+          <div id="sample-metadata" class="panel-body"></div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div id="bar">
+        </div>
+        <p style="background-color: rgb(128, 183, 228);">The above bar chart shows the top 10 bacters species found in the chosen subject, as well as the number of each of those ten species.</p>
+      </div>
+      <div class="col-md-5">
+        <div id="gauge"></div>
+        <p> The above gauge chart shows the relative frequency of washings the chosen subjec peforms.
+          The level of frequency is shown from 0 to 10, with 0 and 10 being the min and max frequency of the test group. </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div id="bubble"></div>
+        <p style="background-color: moccasin;"> The bubble chart displays the bacteria cultures per sample for the chosen subject. This graphs indicates how many 
+          different bacteria cultures were found in each sample for this specific subject. The larger bubbles indicate a larger number of bacteria cultures found. </p>
+      </div>
+    </div>
+  </div>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="charts.js"></script>
+  
+</body>
+</html>

@@ -1,0 +1,8 @@
+
+.jumbotron { 
+    background-image: url("./microbio.jpg");
+    background-size: 50% 50%;
+    text-align: center;
+    font-weight: bold;
+}
+
